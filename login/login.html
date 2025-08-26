@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/login/assets/css/login.css"
+    />
+    <script src="/login/assets/js/script.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Welcome Back</h1>
+
+      <div class="login-box">
+        <h2>Log In</h2>
+        <form method="post" action="/login/php/authenticate.php">
+          <label for="username">Username</label>
+          <input type="text" name="username" placeholder="Enter Username" />
+
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="Enter Password" />
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

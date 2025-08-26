@@ -1,0 +1,189 @@
+/* Base Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0e1a2b, #152b45);
+    margin: 0;
+    padding: 40px 20px;
+    color: #e0e6ed;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(28, 50, 77, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+/* Headings */
+h1 {
+    font-size: 28px;
+    color: #91dcff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+h3 {
+    color: #b0bec5;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Profile UID Display */
+.container p {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Download Button */
+.download-btn {
+    background-color: #026dd1;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto 30px auto;
+    transition: background 0.3s ease;
+}
+.download-btn:hover {
+    background-color: #026dd1;
+    transform: scale(1.05);
+    border: 1px solid #e0f3ff;
+}
+
+/* Categories Section */
+.categories {
+    padding: 10px;
+}
+
+/* Individual Category Row */
+.category-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 10px;
+    background: #0f1c2b;
+    border-left: 4px solid #4fc3f7;
+    border-radius: 6px;
+}
+
+/* Category Label */
+.category-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+/* Button Group */
+.toggle-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* Hide radios */
+.toggle-buttons input[type="radio"] {
+    display: none;
+}
+
+/* Base Labels */
+.toggle-buttons label {
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #455a64;
+    background-color: #37474f;
+    color: #eceff1;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover */
+.toggle-buttons label:hover {
+    transform: scale(1.05);
+}
+
+/* Hover Styles */
+.toggle-buttons label.like-btn:hover {
+    background-color: #2ecc65c8;
+}
+.toggle-buttons label.dislike-btn:hover {
+    background-color: #e53935;
+}
+.toggle-buttons label.neutral-btn:hover {
+    background-color: #ff8400eb;
+}
+
+/* Selected States */
+.toggle-buttons input[type="radio"]:checked + label.like-btn {
+    background-color: #2ecc65c8;
+    border: 2px solid #ffffff;
+    color: #fff;
+}
+.toggle-buttons input[type="radio"]:checked + label.dislike-btn {
+    background-color: #e53935;
+    border: 2px solid #ffffff;
+    color: #fff;
+}
+.toggle-buttons input[type="radio"]:checked + label.neutral-btn {
+    background-color: #ff8400eb;
+    border: 2px solid #ffffff;
+    color: #fff;
+}
+
+/* Buttons Area */
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.save-btn, .cancel-btn, .delete-btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Save */
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+.save-btn:hover {
+    background-color: #43a048b8;
+    transform: scale(1.05);
+}
+
+/* Cancel */
+.cancel-btn {
+    background-color: #455a64;
+    color: white;
+}
+.cancel-btn:hover {
+    background-color: #37474f;
+    transform: scale(1.05);
+}
+
+/* Delete */
+.delete-btn {
+    background-color: #c62828;
+    color: white;
+}
+.delete-btn:hover {
+    background-color: #b71c1ce3;
+    transform: scale(1.05);
+}

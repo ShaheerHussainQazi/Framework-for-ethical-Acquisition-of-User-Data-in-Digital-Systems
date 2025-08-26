@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #e0e6ed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background: linear-gradient(270deg, #0e1a2b, #152b45, #0e1a2b);
+    background-size: 600% 600%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Background gradient animation */
+@keyframes gradientShift {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Main container with glassmorphism */
+.main-container {
+    background: rgba(28, 50, 77, 0.85);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 40px 50px;
+    width: 500px;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #91dcff;
+    text-shadow: 0 0 5px #4fc3f7;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #b0bec5;
+    text-shadow: 0 0 3px #3a7bd5;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Labels */
+label {
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    color: #b0bec5;
+    user-select: none;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #4fc3f7;
+    background-color: #102536;
+    color: #e0e6ed;
+    font-size: 16px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #6c7a89;
+}
+
+/* Input focus */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #4fc3f7;
+    box-shadow: 0 0 10px #4fc3f7;
+}
+
+/* Submit button */
+.btn {
+    background: linear-gradient(135deg, #026dd1, #4fc3f7);
+    color: white;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(38, 136, 224, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(38, 136, 224, 0.8);
+}
+
+/* Error message */
+.error {
+    color: #ff4d4d;
+    font-size: 0.9em;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+    .main-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e6ed;
+}
+
+body, html {
+  height: 100%;
+  background: linear-gradient(135deg, #001f3f, #004080);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.downloader-container {
+  background: rgba(20, 37, 56, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 40px 35px;
+  border-radius: 16px;
+  border: 1.5px solid #b4e4fa;
+  width: 400px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #91dcff;
+  text-shadow: 0 0 2px #4fc3f7;
+  user-select: none;
+}
+
+/* Form input */
+input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  border: 1.5px solid #4fc3f7;
+  background-color: #102536;
+  color: #e0e6ed;
+  font-size: 16px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #6c7a89;
+}
+
+/* Focus on input */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #91dcff;
+  box-shadow: 0 0 12px #4fc3f7;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #026dd1, #4fc3f7);
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 2px 8px rgba(38, 136, 224, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 3px 6px rgba(38, 136, 224, 0.9);
+}
+
+/* Error message */
+.error {
+  color: #ff6b6b;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 0 5px #ff4d4d;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .downloader-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}

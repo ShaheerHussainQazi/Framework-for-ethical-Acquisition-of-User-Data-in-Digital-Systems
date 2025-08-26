@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>register Page</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/register/assets/css/register.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Create Account</h1>
+
+      <div class="login-box">
+        <h2>Register</h2>
+        <form method="post" action="/register/php/authenticate.php">
+          <label for="username">Username</label>
+          <input type="text" name="username" placeholder="Enter Username" />
+
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="Enter Password" />
+
+          <button type="submit" class="btn">Create Account</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/register/assets/js/script.js"></script>
+  </body>
+</html>

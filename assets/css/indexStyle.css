@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e6ed;
+}
+
+/* Body and background image with blur and subtle animation */
+body, html {
+  height: 100%;
+  background: url("/assets/Images/index-background.png") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Overlay to dim and blur background for focus */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 10, 25, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+/* Container holds all content, centered */
+.container {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Main heading */
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #82c7ff;
+  text-shadow:
+    0 0 10px #3276ff;
+  user-select: none;
+}
+
+/* Panel container */
+.box-container {
+  background: rgba(22, 40, 61, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid #ffffff;
+  padding: 35px 50px;
+  width: 480px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+/* Subheading */
+.panel-heading {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #abcfff;
+  text-shadow: 0 0 3px #5c9aff;
+  user-select: none;
+}
+
+/* Panels container */
+.panel-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+/* Individual panel styling */
+.panel {
+  flex: 1;
+  cursor: pointer;
+  padding: 25px 0;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 3px #00000088;
+}
+
+/* Register panel */
+.panel.admin {
+  background: linear-gradient(135deg, #9b2e2e, #ce1f1f);
+  box-shadow: 0 6px 20px rgba(206, 6, 6, 0.7);
+  border: 2px solid transparent;
+}
+
+.panel.admin:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 80, 80, 0.9);
+  border: 2.5px solid #ff5050;
+}
+
+/* Login panel */
+.panel.user {
+  background: linear-gradient(135deg, #154c91, #3578e5);
+  box-shadow: 0 6px 20px rgba(53, 120, 229, 0.7);
+  border: 2px solid transparent;
+}
+
+.panel.user:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(100, 160, 255, 0.9);
+  border: 2.5px solid #649aff;
+}
+
+/* Panel text */
+.panel-text {
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .box-container {
+    width: 90vw;
+    padding: 30px 25px;
+  }
+  .panel-container {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .panel {
+    width: 100%;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  .panel-heading {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+}
